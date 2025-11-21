@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 import WatchConnectivity
 
 class ConnectivityManager: NSObject, ObservableObject {
