@@ -1,0 +1,1004 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB9357322ED12F19005BC0C3 /* InfiniteMeditation Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AB9357312ED12F19005BC0C3 /* InfiniteMeditation Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB93571C2ED12F19005BC0C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB9357062ED12F17005BC0C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB93570D2ED12F18005BC0C3;
+			remoteInfo = InfiniteMeditation;
+		};
+		AB9357262ED12F19005BC0C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB9357062ED12F17005BC0C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB93570D2ED12F18005BC0C3;
+			remoteInfo = InfiniteMeditation;
+		};
+		AB9357332ED12F19005BC0C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB9357062ED12F17005BC0C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB9357302ED12F19005BC0C3;
+			remoteInfo = "InfiniteMeditation Watch App";
+		};
+		AB9357412ED12F1A005BC0C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB9357062ED12F17005BC0C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB9357302ED12F19005BC0C3;
+			remoteInfo = "InfiniteMeditation Watch App";
+		};
+		AB93574B2ED12F1A005BC0C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB9357062ED12F17005BC0C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB9357302ED12F19005BC0C3;
+			remoteInfo = "InfiniteMeditation Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AB9357572ED12F1A005BC0C3 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				AB9357322ED12F19005BC0C3 /* InfiniteMeditation Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AB93570E2ED12F18005BC0C3 /* InfiniteMeditation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteMeditation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB93571B2ED12F19005BC0C3 /* InfiniteMeditationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiniteMeditationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9357252ED12F19005BC0C3 /* InfiniteMeditationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiniteMeditationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9357312ED12F19005BC0C3 /* InfiniteMeditation Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InfiniteMeditation Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9357402ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InfiniteMeditation Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB93574A2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InfiniteMeditation Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		AB9357102ED12F18005BC0C3 /* InfiniteMeditation */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = InfiniteMeditation;
+			sourceTree = "<group>";
+		};
+		AB93571E2ED12F19005BC0C3 /* InfiniteMeditationTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = InfiniteMeditationTests;
+			sourceTree = "<group>";
+		};
+		AB9357282ED12F19005BC0C3 /* InfiniteMeditationUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = InfiniteMeditationUITests;
+			sourceTree = "<group>";
+		};
+		AB9357352ED12F19005BC0C3 /* InfiniteMeditation Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "InfiniteMeditation Watch App";
+			sourceTree = "<group>";
+		};
+		AB9357432ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "InfiniteMeditation Watch AppTests";
+			sourceTree = "<group>";
+		};
+		AB93574D2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "InfiniteMeditation Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB93570B2ED12F18005BC0C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB9357182ED12F19005BC0C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB9357222ED12F19005BC0C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB93572E2ED12F19005BC0C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB93573D2ED12F1A005BC0C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB9357472ED12F1A005BC0C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB9357052ED12F17005BC0C3 = {
+			isa = PBXGroup;
+			children = (
+				AB9357102ED12F18005BC0C3 /* InfiniteMeditation */,
+				AB93571E2ED12F19005BC0C3 /* InfiniteMeditationTests */,
+				AB9357282ED12F19005BC0C3 /* InfiniteMeditationUITests */,
+				AB9357352ED12F19005BC0C3 /* InfiniteMeditation Watch App */,
+				AB9357432ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests */,
+				AB93574D2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests */,
+				AB93570F2ED12F18005BC0C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB93570F2ED12F18005BC0C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB93570E2ED12F18005BC0C3 /* InfiniteMeditation.app */,
+				AB93571B2ED12F19005BC0C3 /* InfiniteMeditationTests.xctest */,
+				AB9357252ED12F19005BC0C3 /* InfiniteMeditationUITests.xctest */,
+				AB9357312ED12F19005BC0C3 /* InfiniteMeditation Watch App.app */,
+				AB9357402ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests.xctest */,
+				AB93574A2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB93570D2ED12F18005BC0C3 /* InfiniteMeditation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB9357582ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation" */;
+			buildPhases = (
+				AB93570A2ED12F18005BC0C3 /* Sources */,
+				AB93570B2ED12F18005BC0C3 /* Frameworks */,
+				AB93570C2ED12F18005BC0C3 /* Resources */,
+				AB9357572ED12F1A005BC0C3 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB9357342ED12F19005BC0C3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AB9357102ED12F18005BC0C3 /* InfiniteMeditation */,
+			);
+			name = InfiniteMeditation;
+			packageProductDependencies = (
+			);
+			productName = InfiniteMeditation;
+			productReference = AB93570E2ED12F18005BC0C3 /* InfiniteMeditation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB93571A2ED12F19005BC0C3 /* InfiniteMeditationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB93575B2ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditationTests" */;
+			buildPhases = (
+				AB9357172ED12F19005BC0C3 /* Sources */,
+				AB9357182ED12F19005BC0C3 /* Frameworks */,
+				AB9357192ED12F19005BC0C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB93571D2ED12F19005BC0C3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AB93571E2ED12F19005BC0C3 /* InfiniteMeditationTests */,
+			);
+			name = InfiniteMeditationTests;
+			packageProductDependencies = (
+			);
+			productName = InfiniteMeditationTests;
+			productReference = AB93571B2ED12F19005BC0C3 /* InfiniteMeditationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AB9357242ED12F19005BC0C3 /* InfiniteMeditationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB93575E2ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditationUITests" */;
+			buildPhases = (
+				AB9357212ED12F19005BC0C3 /* Sources */,
+				AB9357222ED12F19005BC0C3 /* Frameworks */,
+				AB9357232ED12F19005BC0C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB9357272ED12F19005BC0C3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AB9357282ED12F19005BC0C3 /* InfiniteMeditationUITests */,
+			);
+			name = InfiniteMeditationUITests;
+			packageProductDependencies = (
+			);
+			productName = InfiniteMeditationUITests;
+			productReference = AB9357252ED12F19005BC0C3 /* InfiniteMeditationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		AB9357302ED12F19005BC0C3 /* InfiniteMeditation Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB9357542ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation Watch App" */;
+			buildPhases = (
+				AB93572D2ED12F19005BC0C3 /* Sources */,
+				AB93572E2ED12F19005BC0C3 /* Frameworks */,
+				AB93572F2ED12F19005BC0C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				AB9357352ED12F19005BC0C3 /* InfiniteMeditation Watch App */,
+			);
+			name = "InfiniteMeditation Watch App";
+			packageProductDependencies = (
+			);
+			productName = "InfiniteMeditation Watch App";
+			productReference = AB9357312ED12F19005BC0C3 /* InfiniteMeditation Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB93573F2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB9357612ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation Watch AppTests" */;
+			buildPhases = (
+				AB93573C2ED12F1A005BC0C3 /* Sources */,
+				AB93573D2ED12F1A005BC0C3 /* Frameworks */,
+				AB93573E2ED12F1A005BC0C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB9357422ED12F1A005BC0C3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AB9357432ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests */,
+			);
+			name = "InfiniteMeditation Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "InfiniteMeditation Watch AppTests";
+			productReference = AB9357402ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AB9357492ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB9357642ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation Watch AppUITests" */;
+			buildPhases = (
+				AB9357462ED12F1A005BC0C3 /* Sources */,
+				AB9357472ED12F1A005BC0C3 /* Frameworks */,
+				AB9357482ED12F1A005BC0C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB93574C2ED12F1A005BC0C3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AB93574D2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests */,
+			);
+			name = "InfiniteMeditation Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "InfiniteMeditation Watch AppUITests";
+			productReference = AB93574A2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB9357062ED12F17005BC0C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					AB93570D2ED12F18005BC0C3 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					AB93571A2ED12F19005BC0C3 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = AB93570D2ED12F18005BC0C3;
+					};
+					AB9357242ED12F19005BC0C3 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = AB93570D2ED12F18005BC0C3;
+					};
+					AB9357302ED12F19005BC0C3 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					AB93573F2ED12F1A005BC0C3 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = AB9357302ED12F19005BC0C3;
+					};
+					AB9357492ED12F1A005BC0C3 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = AB9357302ED12F19005BC0C3;
+					};
+				};
+			};
+			buildConfigurationList = AB9357092ED12F17005BC0C3 /* Build configuration list for PBXProject "InfiniteMeditation" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB9357052ED12F17005BC0C3;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = AB93570F2ED12F18005BC0C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB93570D2ED12F18005BC0C3 /* InfiniteMeditation */,
+				AB93571A2ED12F19005BC0C3 /* InfiniteMeditationTests */,
+				AB9357242ED12F19005BC0C3 /* InfiniteMeditationUITests */,
+				AB9357302ED12F19005BC0C3 /* InfiniteMeditation Watch App */,
+				AB93573F2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests */,
+				AB9357492ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB93570C2ED12F18005BC0C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB9357192ED12F19005BC0C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB9357232ED12F19005BC0C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB93572F2ED12F19005BC0C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB93573E2ED12F1A005BC0C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB9357482ED12F1A005BC0C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB93570A2ED12F18005BC0C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB9357172ED12F19005BC0C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB9357212ED12F19005BC0C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB93572D2ED12F19005BC0C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB93573C2ED12F1A005BC0C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB9357462ED12F1A005BC0C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB93571D2ED12F19005BC0C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB93570D2ED12F18005BC0C3 /* InfiniteMeditation */;
+			targetProxy = AB93571C2ED12F19005BC0C3 /* PBXContainerItemProxy */;
+		};
+		AB9357272ED12F19005BC0C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB93570D2ED12F18005BC0C3 /* InfiniteMeditation */;
+			targetProxy = AB9357262ED12F19005BC0C3 /* PBXContainerItemProxy */;
+		};
+		AB9357342ED12F19005BC0C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB9357302ED12F19005BC0C3 /* InfiniteMeditation Watch App */;
+			targetProxy = AB9357332ED12F19005BC0C3 /* PBXContainerItemProxy */;
+		};
+		AB9357422ED12F1A005BC0C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB9357302ED12F19005BC0C3 /* InfiniteMeditation Watch App */;
+			targetProxy = AB9357412ED12F1A005BC0C3 /* PBXContainerItemProxy */;
+		};
+		AB93574C2ED12F1A005BC0C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB9357302ED12F19005BC0C3 /* InfiniteMeditation Watch App */;
+			targetProxy = AB93574B2ED12F1A005BC0C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AB9357522ED12F1A005BC0C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 5QLYWR2R9M;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB9357532ED12F1A005BC0C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 5QLYWR2R9M;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		AB9357552ED12F1A005BC0C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5QLYWR2R9M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = InfiniteMeditation;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.AnomalousResearch.InfiniteMeditation;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditation.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		AB9357562ED12F1A005BC0C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5QLYWR2R9M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = InfiniteMeditation;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.AnomalousResearch.InfiniteMeditation;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditation.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		AB9357592ED12F1A005BC0C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5QLYWR2R9M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = InfiniteMeditation;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB93575A2ED12F1A005BC0C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5QLYWR2R9M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = InfiniteMeditation;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB93575C2ED12F1A005BC0C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5QLYWR2R9M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfiniteMeditation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InfiniteMeditation";
+			};
+			name = Debug;
+		};
+		AB93575D2ED12F1A005BC0C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5QLYWR2R9M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfiniteMeditation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InfiniteMeditation";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB93575F2ED12F1A005BC0C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5QLYWR2R9M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = InfiniteMeditation;
+			};
+			name = Debug;
+		};
+		AB9357602ED12F1A005BC0C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5QLYWR2R9M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = InfiniteMeditation;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB9357622ED12F1A005BC0C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5QLYWR2R9M;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AnomalousResearch.InfiniteMeditation-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfiniteMeditation Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InfiniteMeditation Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		AB9357632ED12F1A005BC0C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5QLYWR2R9M;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AnomalousResearch.InfiniteMeditation-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfiniteMeditation Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InfiniteMeditation Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		AB9357652ED12F1A005BC0C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5QLYWR2R9M;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AnomalousResearch.InfiniteMeditation-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "InfiniteMeditation Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		AB9357662ED12F1A005BC0C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5QLYWR2R9M;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AnomalousResearch.InfiniteMeditation-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "InfiniteMeditation Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB9357092ED12F17005BC0C3 /* Build configuration list for PBXProject "InfiniteMeditation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB9357522ED12F1A005BC0C3 /* Debug */,
+				AB9357532ED12F1A005BC0C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB9357542ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB9357552ED12F1A005BC0C3 /* Debug */,
+				AB9357562ED12F1A005BC0C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB9357582ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB9357592ED12F1A005BC0C3 /* Debug */,
+				AB93575A2ED12F1A005BC0C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB93575B2ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB93575C2ED12F1A005BC0C3 /* Debug */,
+				AB93575D2ED12F1A005BC0C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB93575E2ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB93575F2ED12F1A005BC0C3 /* Debug */,
+				AB9357602ED12F1A005BC0C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB9357612ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB9357622ED12F1A005BC0C3 /* Debug */,
+				AB9357632ED12F1A005BC0C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB9357642ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB9357652ED12F1A005BC0C3 /* Debug */,
+				AB9357662ED12F1A005BC0C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB9357062ED12F17005BC0C3 /* Project object */;
+}
