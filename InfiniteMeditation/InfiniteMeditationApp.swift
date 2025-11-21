@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct InfiniteMeditationApp: App {
+struct HapticTimerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

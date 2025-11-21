@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB9357322ED12F19005BC0C3 /* InfiniteMeditation Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AB9357312ED12F19005BC0C3 /* InfiniteMeditation Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AB9357A22ED13017005BC0C3 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9357A12ED13017005BC0C3 /* WatchConnectivity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		AB9357312ED12F19005BC0C3 /* InfiniteMeditation Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InfiniteMeditation Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9357402ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InfiniteMeditation Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB93574A2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InfiniteMeditation Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9357A12ED13017005BC0C3 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -109,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB9357A22ED13017005BC0C3 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +162,7 @@
 				AB9357352ED12F19005BC0C3 /* InfiniteMeditation Watch App */,
 				AB9357432ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests */,
 				AB93574D2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests */,
+				AB9357A02ED13017005BC0C3 /* Frameworks */,
 				AB93570F2ED12F18005BC0C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -174,6 +178,14 @@
 				AB93574A2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AB9357A02ED13017005BC0C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB9357A12ED13017005BC0C3 /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
