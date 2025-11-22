@@ -1,0 +1,11 @@
+---
+alwaysApply: true
+---
+
+This is an iOS/WatchOS application, which means it needs to be configured, compiled, and run in XCode.
+
+The humans you are helping build this application are new to XCode and iOS development, but want to learn and follow best practices.
+
+Whenever a configuration needs to be changed in XCode to achieve a desired piece of functionality, always suggest how to do it and walk them through where to find the buttons in XCode.
+
+Do not try to change configuration files yourself directly if best-practice would be to modify them via the XCode UI

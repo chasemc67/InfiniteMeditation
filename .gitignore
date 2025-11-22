@@ -47,6 +47,3 @@ playground.xcworkspace
 .DS_Store
 *.swp
 *.xcuserdatad/
-
-# Cursor
-.cursor/ 
