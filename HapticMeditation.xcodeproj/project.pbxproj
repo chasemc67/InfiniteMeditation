@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB9357322ED12F19005BC0C3 /* InfiniteMeditation Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AB9357312ED12F19005BC0C3 /* InfiniteMeditation Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AB9357322ED12F19005BC0C3 /* HapticMeditation Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AB9357312ED12F19005BC0C3 /* HapticMeditation Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AB9357A22ED13017005BC0C3 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9357A12ED13017005BC0C3 /* WatchConnectivity.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +56,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				AB9357322ED12F19005BC0C3 /* InfiniteMeditation Watch App.app in Embed Watch Content */,
+				AB9357322ED12F19005BC0C3 /* HapticMeditation Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,12 +64,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AB93570E2ED12F18005BC0C3 /* InfiniteMeditation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteMeditation.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB93571B2ED12F19005BC0C3 /* InfiniteMeditationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiniteMeditationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB9357252ED12F19005BC0C3 /* InfiniteMeditationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiniteMeditationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB9357312ED12F19005BC0C3 /* InfiniteMeditation Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InfiniteMeditation Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB9357402ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InfiniteMeditation Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB93574A2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InfiniteMeditation Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB93570E2ED12F18005BC0C3 /* HapticMeditation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HapticMeditation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB93571B2ED12F19005BC0C3 /* HapticMeditationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HapticMeditationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9357252ED12F19005BC0C3 /* HapticMeditationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HapticMeditationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9357312ED12F19005BC0C3 /* HapticMeditation Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HapticMeditation Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9357402ED12F1A005BC0C3 /* HapticMeditation Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HapticMeditation Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB93574A2ED12F1A005BC0C3 /* HapticMeditation Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HapticMeditation Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9357A12ED13017005BC0C3 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -170,12 +170,12 @@
 		AB93570F2ED12F18005BC0C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AB93570E2ED12F18005BC0C3 /* InfiniteMeditation.app */,
-				AB93571B2ED12F19005BC0C3 /* InfiniteMeditationTests.xctest */,
-				AB9357252ED12F19005BC0C3 /* InfiniteMeditationUITests.xctest */,
-				AB9357312ED12F19005BC0C3 /* InfiniteMeditation Watch App.app */,
-				AB9357402ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests.xctest */,
-				AB93574A2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests.xctest */,
+				AB93570E2ED12F18005BC0C3 /* HapticMeditation.app */,
+				AB93571B2ED12F19005BC0C3 /* HapticMeditationTests.xctest */,
+				AB9357252ED12F19005BC0C3 /* HapticMeditationUITests.xctest */,
+				AB9357312ED12F19005BC0C3 /* HapticMeditation Watch App.app */,
+				AB9357402ED12F1A005BC0C3 /* HapticMeditation Watch AppTests.xctest */,
+				AB93574A2ED12F1A005BC0C3 /* HapticMeditation Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,9 +191,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AB93570D2ED12F18005BC0C3 /* InfiniteMeditation */ = {
+		AB93570D2ED12F18005BC0C3 /* HapticMeditation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB9357582ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation" */;
+			buildConfigurationList = AB9357582ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "HapticMeditation" */;
 			buildPhases = (
 				AB93570A2ED12F18005BC0C3 /* Sources */,
 				AB93570B2ED12F18005BC0C3 /* Frameworks */,
@@ -208,16 +208,16 @@
 			fileSystemSynchronizedGroups = (
 				AB9357102ED12F18005BC0C3 /* InfiniteMeditation */,
 			);
-			name = InfiniteMeditation;
+			name = HapticMeditation;
 			packageProductDependencies = (
 			);
 			productName = InfiniteMeditation;
-			productReference = AB93570E2ED12F18005BC0C3 /* InfiniteMeditation.app */;
+			productReference = AB93570E2ED12F18005BC0C3 /* HapticMeditation.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AB93571A2ED12F19005BC0C3 /* InfiniteMeditationTests */ = {
+		AB93571A2ED12F19005BC0C3 /* HapticMeditationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB93575B2ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditationTests" */;
+			buildConfigurationList = AB93575B2ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "HapticMeditationTests" */;
 			buildPhases = (
 				AB9357172ED12F19005BC0C3 /* Sources */,
 				AB9357182ED12F19005BC0C3 /* Frameworks */,
@@ -231,16 +231,16 @@
 			fileSystemSynchronizedGroups = (
 				AB93571E2ED12F19005BC0C3 /* InfiniteMeditationTests */,
 			);
-			name = InfiniteMeditationTests;
+			name = HapticMeditationTests;
 			packageProductDependencies = (
 			);
 			productName = InfiniteMeditationTests;
-			productReference = AB93571B2ED12F19005BC0C3 /* InfiniteMeditationTests.xctest */;
+			productReference = AB93571B2ED12F19005BC0C3 /* HapticMeditationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AB9357242ED12F19005BC0C3 /* InfiniteMeditationUITests */ = {
+		AB9357242ED12F19005BC0C3 /* HapticMeditationUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB93575E2ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditationUITests" */;
+			buildConfigurationList = AB93575E2ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "HapticMeditationUITests" */;
 			buildPhases = (
 				AB9357212ED12F19005BC0C3 /* Sources */,
 				AB9357222ED12F19005BC0C3 /* Frameworks */,
@@ -254,16 +254,16 @@
 			fileSystemSynchronizedGroups = (
 				AB9357282ED12F19005BC0C3 /* InfiniteMeditationUITests */,
 			);
-			name = InfiniteMeditationUITests;
+			name = HapticMeditationUITests;
 			packageProductDependencies = (
 			);
 			productName = InfiniteMeditationUITests;
-			productReference = AB9357252ED12F19005BC0C3 /* InfiniteMeditationUITests.xctest */;
+			productReference = AB9357252ED12F19005BC0C3 /* HapticMeditationUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		AB9357302ED12F19005BC0C3 /* InfiniteMeditation Watch App */ = {
+		AB9357302ED12F19005BC0C3 /* HapticMeditation Watch App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB9357542ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation Watch App" */;
+			buildConfigurationList = AB9357542ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "HapticMeditation Watch App" */;
 			buildPhases = (
 				AB93572D2ED12F19005BC0C3 /* Sources */,
 				AB93572E2ED12F19005BC0C3 /* Frameworks */,
@@ -276,16 +276,16 @@
 			fileSystemSynchronizedGroups = (
 				AB9357352ED12F19005BC0C3 /* InfiniteMeditation Watch App */,
 			);
-			name = "InfiniteMeditation Watch App";
+			name = "HapticMeditation Watch App";
 			packageProductDependencies = (
 			);
 			productName = "InfiniteMeditation Watch App";
-			productReference = AB9357312ED12F19005BC0C3 /* InfiniteMeditation Watch App.app */;
+			productReference = AB9357312ED12F19005BC0C3 /* HapticMeditation Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AB93573F2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests */ = {
+		AB93573F2ED12F1A005BC0C3 /* HapticMeditation Watch AppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB9357612ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation Watch AppTests" */;
+			buildConfigurationList = AB9357612ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "HapticMeditation Watch AppTests" */;
 			buildPhases = (
 				AB93573C2ED12F1A005BC0C3 /* Sources */,
 				AB93573D2ED12F1A005BC0C3 /* Frameworks */,
@@ -299,16 +299,16 @@
 			fileSystemSynchronizedGroups = (
 				AB9357432ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests */,
 			);
-			name = "InfiniteMeditation Watch AppTests";
+			name = "HapticMeditation Watch AppTests";
 			packageProductDependencies = (
 			);
 			productName = "InfiniteMeditation Watch AppTests";
-			productReference = AB9357402ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests.xctest */;
+			productReference = AB9357402ED12F1A005BC0C3 /* HapticMeditation Watch AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AB9357492ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests */ = {
+		AB9357492ED12F1A005BC0C3 /* HapticMeditation Watch AppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB9357642ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation Watch AppUITests" */;
+			buildConfigurationList = AB9357642ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "HapticMeditation Watch AppUITests" */;
 			buildPhases = (
 				AB9357462ED12F1A005BC0C3 /* Sources */,
 				AB9357472ED12F1A005BC0C3 /* Frameworks */,
@@ -322,11 +322,11 @@
 			fileSystemSynchronizedGroups = (
 				AB93574D2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests */,
 			);
-			name = "InfiniteMeditation Watch AppUITests";
+			name = "HapticMeditation Watch AppUITests";
 			packageProductDependencies = (
 			);
 			productName = "InfiniteMeditation Watch AppUITests";
-			productReference = AB93574A2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests.xctest */;
+			productReference = AB93574A2ED12F1A005BC0C3 /* HapticMeditation Watch AppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -363,7 +363,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AB9357092ED12F17005BC0C3 /* Build configuration list for PBXProject "InfiniteMeditation" */;
+			buildConfigurationList = AB9357092ED12F17005BC0C3 /* Build configuration list for PBXProject "HapticMeditation" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -377,12 +377,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AB93570D2ED12F18005BC0C3 /* InfiniteMeditation */,
-				AB93571A2ED12F19005BC0C3 /* InfiniteMeditationTests */,
-				AB9357242ED12F19005BC0C3 /* InfiniteMeditationUITests */,
-				AB9357302ED12F19005BC0C3 /* InfiniteMeditation Watch App */,
-				AB93573F2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests */,
-				AB9357492ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests */,
+				AB93570D2ED12F18005BC0C3 /* HapticMeditation */,
+				AB93571A2ED12F19005BC0C3 /* HapticMeditationTests */,
+				AB9357242ED12F19005BC0C3 /* HapticMeditationUITests */,
+				AB9357302ED12F19005BC0C3 /* HapticMeditation Watch App */,
+				AB93573F2ED12F1A005BC0C3 /* HapticMeditation Watch AppTests */,
+				AB9357492ED12F1A005BC0C3 /* HapticMeditation Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -480,27 +480,27 @@
 /* Begin PBXTargetDependency section */
 		AB93571D2ED12F19005BC0C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AB93570D2ED12F18005BC0C3 /* InfiniteMeditation */;
+			target = AB93570D2ED12F18005BC0C3 /* HapticMeditation */;
 			targetProxy = AB93571C2ED12F19005BC0C3 /* PBXContainerItemProxy */;
 		};
 		AB9357272ED12F19005BC0C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AB93570D2ED12F18005BC0C3 /* InfiniteMeditation */;
+			target = AB93570D2ED12F18005BC0C3 /* HapticMeditation */;
 			targetProxy = AB9357262ED12F19005BC0C3 /* PBXContainerItemProxy */;
 		};
 		AB9357342ED12F19005BC0C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AB9357302ED12F19005BC0C3 /* InfiniteMeditation Watch App */;
+			target = AB9357302ED12F19005BC0C3 /* HapticMeditation Watch App */;
 			targetProxy = AB9357332ED12F19005BC0C3 /* PBXContainerItemProxy */;
 		};
 		AB9357422ED12F1A005BC0C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AB9357302ED12F19005BC0C3 /* InfiniteMeditation Watch App */;
+			target = AB9357302ED12F19005BC0C3 /* HapticMeditation Watch App */;
 			targetProxy = AB9357412ED12F1A005BC0C3 /* PBXContainerItemProxy */;
 		};
 		AB93574C2ED12F1A005BC0C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AB9357302ED12F19005BC0C3 /* InfiniteMeditation Watch App */;
+			target = AB9357302ED12F19005BC0C3 /* HapticMeditation Watch App */;
 			targetProxy = AB93574B2ED12F1A005BC0C3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -634,13 +634,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = InfiniteMeditation;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.AnomalousResearch.InfiniteMeditation;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.AnomalousResearch.HapticMeditation;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditation.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.HapticMeditation.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -667,13 +667,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = InfiniteMeditation;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.AnomalousResearch.InfiniteMeditation;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.AnomalousResearch.HapticMeditation;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditation.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.HapticMeditation.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -694,12 +694,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5QLYWR2R9M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Infinite Meditation";
+				INFOPLIST_KEY_CFBundleDisplayName = InfiniteMeditation;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -711,9 +712,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditation;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.HapticMeditation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -730,12 +732,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5QLYWR2R9M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Infinite Meditation";
+				INFOPLIST_KEY_CFBundleDisplayName = InfiniteMeditation;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -747,9 +750,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditation;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.HapticMeditation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -781,7 +785,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfiniteMeditation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InfiniteMeditation";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HapticMeditation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HapticMeditation";
 			};
 			name = Debug;
 		};
@@ -804,7 +808,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfiniteMeditation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InfiniteMeditation";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HapticMeditation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HapticMeditation";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -872,7 +876,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfiniteMeditation Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InfiniteMeditation Watch App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HapticMeditation Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HapticMeditation Watch App";
 				WATCHOS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Debug;
@@ -895,7 +899,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfiniteMeditation Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InfiniteMeditation Watch App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HapticMeditation Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HapticMeditation Watch App";
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 26.0;
 			};
@@ -949,7 +953,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AB9357092ED12F17005BC0C3 /* Build configuration list for PBXProject "InfiniteMeditation" */ = {
+		AB9357092ED12F17005BC0C3 /* Build configuration list for PBXProject "HapticMeditation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB9357522ED12F1A005BC0C3 /* Debug */,
@@ -958,7 +962,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB9357542ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation Watch App" */ = {
+		AB9357542ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "HapticMeditation Watch App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB9357552ED12F1A005BC0C3 /* Debug */,
@@ -967,7 +971,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB9357582ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation" */ = {
+		AB9357582ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "HapticMeditation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB9357592ED12F1A005BC0C3 /* Debug */,
@@ -976,7 +980,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB93575B2ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditationTests" */ = {
+		AB93575B2ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "HapticMeditationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB93575C2ED12F1A005BC0C3 /* Debug */,
@@ -985,7 +989,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB93575E2ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditationUITests" */ = {
+		AB93575E2ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "HapticMeditationUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB93575F2ED12F1A005BC0C3 /* Debug */,
@@ -994,7 +998,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB9357612ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation Watch AppTests" */ = {
+		AB9357612ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "HapticMeditation Watch AppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB9357622ED12F1A005BC0C3 /* Debug */,
@@ -1003,7 +1007,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB9357642ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "InfiniteMeditation Watch AppUITests" */ = {
+		AB9357642ED12F1A005BC0C3 /* Build configuration list for PBXNativeTarget "HapticMeditation Watch AppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB9357652ED12F1A005BC0C3 /* Debug */,
