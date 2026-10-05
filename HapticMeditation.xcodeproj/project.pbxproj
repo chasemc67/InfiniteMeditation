@@ -641,13 +641,13 @@
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Long meditation sessions run as a Mind & Body workout so your watch can keep tapping with your wrist down.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Long meditation sessions run as a Mind & Body workout. A workout is only saved to Health if you turn on Save to Health.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.AnomalousResearch.InfiniteMeditation;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.AnomalousResearch.MeditationTimer;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditation.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.MeditationTimer.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -679,13 +679,13 @@
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Long meditation sessions run as a Mind & Body workout so your watch can keep tapping with your wrist down.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Long meditation sessions run as a Mind & Body workout. A workout is only saved to Health if you turn on Save to Health.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.AnomalousResearch.InfiniteMeditation;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.AnomalousResearch.MeditationTimer;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditation.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.MeditationTimer.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -727,7 +727,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.MeditationTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -767,7 +767,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.InfiniteMeditation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.MeditationTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
