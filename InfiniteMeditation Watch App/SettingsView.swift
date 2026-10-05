@@ -57,14 +57,20 @@ struct SettingsView: View {
                 }
                 .id("backgroundMode")
                 if settings.values.watchMode == .long {
-                    Toggle("Save to Health", isOn: $settings.values.saveLongSessionsToHealth)
+                    Toggle("Save workout to Health", isOn: $settings.values.saveLongSessionsToHealth)
                 }
             } header: {
                 Text("Background")
             } footer: {
                 Text(settings.values.watchMode == .standard
                      ? "watchOS allows up to 1 hour with the wrist down. Raise your wrist to renew."
-                     : "Runs as a Mind & Body workout with no time limit. Asks for Health permission once.")
+                     : "Runs as a Mind & Body workout with no time limit. The workout is saved only if Save workout to Health is on; otherwise it is discarded.")
+            }
+
+            Section {
+                Toggle("Mindful Minutes", isOn: $settings.values.recordMindfulMinutes)
+            } footer: {
+                Text("On by default. Ending saves each uninterrupted stretch to Health as Mindful Minutes. Pauses are left out. In a mirrored session, only the device you tap End on writes it.")
             }
 
             Section {
@@ -73,7 +79,7 @@ struct SettingsView: View {
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             } footer: {
-                Text("Start, pause and end are mirrored while both apps are open.")
+                Text("Pause or end on the iPhone catches up when this app reconnects, including after the wrist has been down.")
             }
         }
         #if DEBUG

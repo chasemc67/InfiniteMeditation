@@ -27,7 +27,7 @@ struct InfiniteMeditationWatchApp: App {
             ContentView(controller: controller)
             #endif
         }
-        .onChange(of: scenePhase) { _, phase in
+        .onChange(of: scenePhase, initial: true) { _, phase in
             if phase == .active { controller.appBecameActive() }
         }
     }

@@ -14,7 +14,7 @@ struct InfiniteMeditationApp: App {
         WindowGroup {
             ContentView(controller: controller)
         }
-        .onChange(of: scenePhase) { _, phase in
+        .onChange(of: scenePhase, initial: true) { _, phase in
             if phase == .active { controller.appBecameActive() }
         }
     }

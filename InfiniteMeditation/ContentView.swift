@@ -11,8 +11,10 @@ struct ContentView: View {
     @ObservedObject var chimes: ChimePlayer
     @ObservedObject var settings: SettingsStore
     @ObservedObject var connectivity: ConnectivityService
+    @ObservedObject var history: SessionHistoryStore
 
     @State private var showingSettings = false
+    @State private var showingHistory = false
 
     init(controller: PhoneSessionController = .shared) {
         self.controller = controller
@@ -20,6 +22,7 @@ struct ContentView: View {
         chimes = controller.chimes
         settings = controller.settings
         connectivity = controller.connectivity
+        history = controller.history
     }
 
     var body: some View {
@@ -33,6 +36,14 @@ struct ContentView: View {
 
             VStack(spacing: 28) {
                 HStack {
+                    Button {
+                        showingHistory = true
+                    } label: {
+                        Image(systemName: "clock.arrow.circlepath")
+                            .font(.title3)
+                            .padding(10)
+                    }
+                    .accessibilityLabel("History")
                     Spacer()
                     Button {
                         showingSettings = true
@@ -80,6 +91,13 @@ struct ContentView: View {
         .preferredColorScheme(.dark)
         .sheet(isPresented: $showingSettings) {
             SettingsView(controller: controller)
+        }
+        .sheet(isPresented: $showingHistory) {
+            NavigationStack {
+                SessionHistoryView(store: history, showsDoneButton: true) { id in
+                    controller.deleteHistory(id: id)
+                }
+            }
         }
         #if DEBUG
         .onAppear {

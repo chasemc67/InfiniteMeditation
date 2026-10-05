@@ -65,6 +65,14 @@ struct SettingsView: View {
                     Text("Chimes keep playing with your phone locked. The ring/silent switch doesn't mute them; use the volume buttons. Sounds are synthesized singing bowls generated for this app.")
                 }
 
+                Section {
+                    Toggle("Mindful Minutes", isOn: $settings.values.recordMindfulMinutes)
+                } header: {
+                    Text("Health")
+                } footer: {
+                    Text("On by default. Ending a session saves the time you were actually meditating to Apple Health as Mindful Minutes. Each uninterrupted stretch is its own entry, so pauses are not counted. If the iPhone and Watch are mirroring one session, only the device you tap End on writes it.")
+                }
+
                 if hasWatch {
                     Section {
                         Picker("Regular tap", selection: $settings.values.minorHaptic) {
@@ -77,7 +85,7 @@ struct SettingsView: View {
                             ForEach(WatchSessionMode.allCases) { Text($0.label).tag($0) }
                         }
                         if settings.values.watchMode == .long {
-                            Toggle("Save long sessions to Health", isOn: $settings.values.saveLongSessionsToHealth)
+                            Toggle("Save workout to Health", isOn: $settings.values.saveLongSessionsToHealth)
                         }
                         Toggle("Mirror start / pause / end", isOn: $settings.values.mirrorSessions)
                         LabeledContent("Status", value: connectivity.counterpart.label)
@@ -101,8 +109,8 @@ struct SettingsView: View {
     private var watchFooter: String {
         let mode = settings.values.watchMode == .standard
             ? "Standard mode keeps taps going with your wrist down for up to 1 hour (a watchOS limit). Raise your wrist to renew."
-            : "Long mode runs as a Mind & Body workout with no time limit and asks for Health permission on the watch."
-        return mode + " Mirroring works while the Watch app is open."
+            : "Long mode runs as a Mind & Body workout with no time limit. Save workout to Health keeps that workout; otherwise it is discarded. Mindful Minutes are saved separately."
+        return mode + " Start, pause, and end catch up when the watch reconnects, even if it was asleep with your wrist down."
     }
 }
 

@@ -10,7 +10,10 @@
 //  early if the user leaves the app (Digital Crown, switching apps).
 //
 //  Long mode: HKWorkoutSession (Mind & Body). Runs until ended, at the cost of a Health
-//  permission prompt and the workout indicator. Saving a workout is optional.
+//  permission prompt and the workout indicator. The workout is discarded unless
+//  "Save workout to Health" is on. Mindful Minutes are a separate HKCategorySample
+//  written when the session ends; they are saved even when this workout is discarded,
+//  and a Mind & Body workout is not itself a Mindful Minutes entry.
 //
 
 import Foundation
@@ -43,15 +46,23 @@ final class BackgroundRuntime: NSObject, ObservableObject {
     private var workoutBuilder: HKLiveWorkoutBuilder?
     private var activeMode: WatchSessionMode?
     private var saveWorkout = false
+    /// Mindful pauses stop the workout session so a saved workout excludes that time.
+    /// WKExtendedRuntimeSession has no pause API; it stays running so a later resume or
+    /// end can still be delivered with the wrist down. The haptic scheduler is what
+    /// actually stops the taps.
+    private var meditationPaused = false
     private let healthStore = HKHealthStore()
 
     var wantsRuntime: Bool { activeMode != nil }
 
     /// Starts keeping the app alive. Must be called while the app is in the foreground.
-    func begin(mode: WatchSessionMode, saveWorkout: Bool) {
+    /// Pass `paused: true` when joining a session the other device has already paused,
+    /// so a workout that starts a moment later does not count the pause.
+    func begin(mode: WatchSessionMode, saveWorkout: Bool, paused: Bool = false) {
         end()
         activeMode = mode
         self.saveWorkout = saveWorkout
+        meditationPaused = paused
         notice = nil
         status = .starting
         switch mode {
@@ -60,6 +71,20 @@ final class BackgroundRuntime: NSObject, ObservableObject {
         case .long:
             Task { await startWorkoutSession() }
         }
+    }
+
+    /// Pauses the Mind & Body workout, if one is running. The extended runtime session
+    /// stays up so haptics can resume without waiting for the wrist to come back up.
+    func pauseWorkout() {
+        meditationPaused = true
+        guard let session = workoutSession, session.state == .running else { return }
+        session.pause()
+    }
+
+    func resumeWorkout() {
+        meditationPaused = false
+        guard let session = workoutSession, session.state == .paused else { return }
+        session.resume()
     }
 
     /// Called when the app becomes active. Restarts the session if it expired or was dropped
@@ -82,6 +107,7 @@ final class BackgroundRuntime: NSObject, ObservableObject {
 
     func end() {
         activeMode = nil
+        meditationPaused = false
         if let session = extendedSession {
             extendedSession = nil
             session.invalidate()
@@ -191,6 +217,13 @@ final class BackgroundRuntime: NSObject, ObservableObject {
         guard let session = workoutSession, ObjectIdentifier(session) == id else { return }
         switch state {
         case .running:
+            if meditationPaused {
+                Task { @MainActor in
+                    guard self.meditationPaused, let session = self.workoutSession, session.state == .running else { return }
+                    session.pause()
+                }
+                return
+            }
             if activeMode == .long { status = .running(.long, until: nil) }
         case .ended, .stopped:
             if state == .stopped {

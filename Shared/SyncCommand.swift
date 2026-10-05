@@ -5,6 +5,27 @@
 
 import Foundation
 
+nonisolated struct MarkSchedule: Equatable, Sendable {
+    var intervalSeconds: TimeInterval
+    /// Every Nth mark is a major mark. 0 disables major marks.
+    var majorEvery: Int
+
+    func isMajor(_ index: Int) -> Bool {
+        majorEvery > 0 && index > 0 && index % majorEvery == 0
+    }
+
+    /// Number of marks that have been reached at the given elapsed time.
+    func marksReached(atElapsed elapsed: TimeInterval) -> Int {
+        guard intervalSeconds > 0, elapsed > 0 else { return 0 }
+        // A few ms of slack so a wake-up that lands a hair early still counts.
+        return Int((elapsed + 0.005) / intervalSeconds)
+    }
+
+    func elapsed(ofMark index: Int) -> TimeInterval {
+        TimeInterval(index) * intervalSeconds
+    }
+}
+
 /// A session control message mirrored between iPhone and Apple Watch over WatchConnectivity.
 nonisolated struct SyncCommand: Equatable, Sendable {
     nonisolated enum Kind: String, Sendable {
