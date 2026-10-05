@@ -1,4 +1,4 @@
-# Infinite Meditation
+# Boundless Meditation
 
 A calm, open-ended **count-up** meditation timer for iPhone and Apple Watch.
 
@@ -56,7 +56,7 @@ The iPhone never "pushes" taps to the watch. Each device runs its own timer and 
 | --- | --- | --- |
 | Target | `HapticMeditation` | `HapticMeditation Watch App` |
 | Bundle ID | `com.AnomalousResearch.MeditationTimer` | `com.AnomalousResearch.MeditationTimer.watchkitapp` |
-| Display name | Infinite Meditation | Infinite Meditation |
+| Display name | Boundless Meditation | Boundless Meditation |
 | Version / build | 2.0 / `CURRENT_PROJECT_VERSION` | 2.0 / same (must match the iOS app) |
 | Deployment target | iOS 26.0 | watchOS 26.0 |
 | Team | Anomalous Research LLC (`XPU32D9V4J`), automatic signing | same |
@@ -92,7 +92,7 @@ The first time, Xcode may ask to register your devices and create provisioning p
 ### One-time App Store Connect setup
 
 1. **App IDs** (developer.apple.com › Certificates, IDs & Profiles › Identifiers). Automatic signing registers `com.AnomalousResearch.MeditationTimer` and `…MeditationTimer.watchkitapp` the first time you build for a device. Confirm the **watchkitapp** identifier has **HealthKit** enabled; automatic signing turns it on because of the entitlement, but check if signing fails.
-2. **App record** (appstoreconnect.apple.com › Apps › **+** › New App): Platform **iOS**, Name "Infinite Meditation" (must be unique on the App Store; tweak if taken), Primary language English, Bundle ID `com.AnomalousResearch.MeditationTimer`, SKU e.g. `infinite-meditation`, Full Access. The watch app ships inside the iOS app, so it needs no separate record.
+2. **App record** (appstoreconnect.apple.com › Apps › **+** › New App): Platform **iOS**, Name "Boundless Meditation" (must be unique on the App Store; tweak if taken), Primary language English, Bundle ID `com.AnomalousResearch.MeditationTimer`, SKU e.g. `infinite-meditation`, Full Access. The watch app ships inside the iOS app, so it needs no separate record.
 3. **API key** (App Store Connect › Users and Access › Integrations › App Store Connect API › Team Keys › **+**): give it the **Admin** role. Admin lets `xcodebuild` create the cloud-managed distribution certificate; App Manager works if a distribution certificate already exists. Download the `.p8` (you can only download it once) and note the **Key ID** and the **Issuer ID** shown above the list.
 
    ```bash

@@ -636,7 +636,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Config/InfiniteMeditationWatch-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Infinite Meditation";
+				INFOPLIST_KEY_CFBundleDisplayName = "Boundless Meditation";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Long meditation sessions run as a Mind & Body workout so your watch can keep tapping with your wrist down.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Long meditation sessions run as a Mind & Body workout. A workout is only saved to Health if you turn on Save to Health.";
@@ -674,7 +674,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Config/InfiniteMeditationWatch-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Infinite Meditation";
+				INFOPLIST_KEY_CFBundleDisplayName = "Boundless Meditation";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Long meditation sessions run as a Mind & Body workout so your watch can keep tapping with your wrist down.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Long meditation sessions run as a Mind & Body workout. A workout is only saved to Health if you turn on Save to Health.";
@@ -713,7 +713,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Config/InfiniteMeditation-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Infinite Meditation";
+				INFOPLIST_KEY_CFBundleDisplayName = "Boundless Meditation";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -753,7 +753,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Config/InfiniteMeditation-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Infinite Meditation";
+				INFOPLIST_KEY_CFBundleDisplayName = "Boundless Meditation";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
