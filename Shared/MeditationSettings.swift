@@ -57,6 +57,8 @@ nonisolated struct MeditationSettings: Codable, Equatable, Sendable {
     var chimeVolume = 0.8
     var watchMode = WatchSessionMode.standard
     var saveLongSessionsToHealth = false
+    /// Write completed sessions to Health as Mindful Minutes. On by default.
+    var recordMindfulMinutes = true
     var mirrorSessions = true
 
     var schedule: MarkSchedule {
@@ -82,6 +84,7 @@ nonisolated struct MeditationSettings: Codable, Equatable, Sendable {
         chimeVolume = (try? c.decodeIfPresent(Double.self, forKey: .chimeVolume)) ?? d.chimeVolume
         watchMode = (try? c.decodeIfPresent(WatchSessionMode.self, forKey: .watchMode)) ?? d.watchMode
         saveLongSessionsToHealth = (try? c.decodeIfPresent(Bool.self, forKey: .saveLongSessionsToHealth)) ?? d.saveLongSessionsToHealth
+        recordMindfulMinutes = (try? c.decodeIfPresent(Bool.self, forKey: .recordMindfulMinutes)) ?? d.recordMindfulMinutes
         mirrorSessions = (try? c.decodeIfPresent(Bool.self, forKey: .mirrorSessions)) ?? d.mirrorSessions
         if intervalMinutes < 1 { intervalMinutes = d.intervalMinutes }
         if majorEvery < 0 { majorEvery = 0 }

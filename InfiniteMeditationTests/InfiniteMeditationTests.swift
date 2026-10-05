@@ -33,6 +33,7 @@ struct MarkScheduleTests {
         #expect(defaults.schedule.isMajor(2))
         #expect(defaults.chimeEnabled)
         #expect(defaults.watchMode == .standard)
+        #expect(defaults.recordMindfulMinutes)
     }
 }
 
@@ -66,6 +67,7 @@ struct SettingsDecodingTests {
         #expect(decoded.intervalMinutes == 10)
         #expect(decoded.majorEvery == 2)
         #expect(decoded.chimeEnabled)
+        #expect(decoded.recordMindfulMinutes)
     }
 
     @Test func invalidIntervalFallsBack() throws {

@@ -48,6 +48,16 @@ struct ContentView: View {
             }
             .padding(.horizontal, 4)
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    NavigationLink {
+                        SessionHistoryView(store: controller.history, showsDoneButton: false) { id in
+                            controller.deleteHistory(id: id)
+                        }
+                    } label: {
+                        Image(systemName: "clock.arrow.circlepath")
+                    }
+                    .accessibilityLabel("History")
+                }
                 ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink {
                         SettingsView(controller: controller)
@@ -119,6 +129,8 @@ private struct StatusLine: View {
             } else {
                 Text(scheduleDescription).foregroundStyle(.secondary)
             }
+        } else if timer.phase == .paused {
+            Text("Paused").foregroundStyle(.secondary)
         } else {
             switch runtime.status {
             case .off, .starting:

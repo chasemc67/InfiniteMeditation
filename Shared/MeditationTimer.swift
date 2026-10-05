@@ -6,27 +6,6 @@
 import Foundation
 import Combine
 
-nonisolated struct MarkSchedule: Equatable, Sendable {
-    var intervalSeconds: TimeInterval
-    /// Every Nth mark is a major mark. 0 disables major marks.
-    var majorEvery: Int
-
-    func isMajor(_ index: Int) -> Bool {
-        majorEvery > 0 && index > 0 && index % majorEvery == 0
-    }
-
-    /// Number of marks that have been reached at the given elapsed time.
-    func marksReached(atElapsed elapsed: TimeInterval) -> Int {
-        guard intervalSeconds > 0, elapsed > 0 else { return 0 }
-        // A few ms of slack so a wake-up that lands a hair early still counts.
-        return Int((elapsed + 0.005) / intervalSeconds)
-    }
-
-    func elapsed(ofMark index: Int) -> TimeInterval {
-        TimeInterval(index) * intervalSeconds
-    }
-}
-
 nonisolated struct Mark: Equatable, Sendable {
     var index: Int
     var isMajor: Bool
@@ -114,6 +93,48 @@ final class MeditationTimer: ObservableObject {
         startScheduler()
     }
 
+    /// Snaps the clock and the mark scheduler to a mirrored snapshot.
+    /// An ended snapshot returns the timer to idle; the caller reads elapsed from the snapshot.
+    func adopt(_ snapshot: SessionSnapshot, now: Date = Date()) {
+        let newSchedule = MarkSchedule(
+            intervalSeconds: TimeInterval(snapshot.intervalMinutes * 60),
+            majorEvery: snapshot.majorEvery
+        )
+        switch snapshot.phase {
+        case .running:
+            let since = snapshot.runningSince ?? now
+            let sameRun = phase == .running
+                && runningSince == since
+                && accumulated == snapshot.accumulated
+                && schedule == newSchedule
+            schedule = newSchedule
+            accumulated = snapshot.accumulated
+            runningSince = since
+            pausedAt = nil
+            if !sameRun {
+                lastHandledMark = newSchedule.marksReached(atElapsed: elapsed(at: now))
+            }
+            phase = .running
+            startScheduler()
+        case .paused:
+            schedule = newSchedule
+            accumulated = snapshot.accumulated
+            runningSince = nil
+            pausedAt = snapshot.pausedAt ?? now
+            lastHandledMark = newSchedule.marksReached(atElapsed: accumulated)
+            phase = .paused
+            stopScheduler()
+        case .ended:
+            schedule = newSchedule
+            stopScheduler()
+            accumulated = 0
+            runningSince = nil
+            pausedAt = nil
+            lastHandledMark = 0
+            phase = .idle
+        }
+    }
+
     /// Ends the session and returns the final elapsed time.
     @discardableResult
     func end(now: Date = Date()) -> TimeInterval {
@@ -172,5 +193,19 @@ final class MeditationTimer: ObservableObject {
         marksFired += 1
         lastMarkAt = now
         onMark?(Mark(index: reached, isMajor: schedule.isMajor(reached)))
+    }
+}
+
+extension SessionSnapshot {
+    /// Idle-screen line after a session ends. `endedRemotely` names the other device.
+    nonisolated func statusText(endedRemotely: Bool) -> String {
+        let clock = TimeFormat.clock(accumulated)
+        if endedRemotely {
+            let device = updatedBy == .phone ? "iPhone" : "Watch"
+            return "\(clock) · ended on \(device)"
+        }
+        let schedule = MarkSchedule(intervalSeconds: TimeInterval(intervalMinutes * 60), majorEvery: majorEvery)
+        let marks = schedule.marksReached(atElapsed: accumulated)
+        return "\(clock) · \(marks) mark\(marks == 1 ? "" : "s")"
     }
 }

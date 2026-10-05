@@ -638,8 +638,8 @@
 				INFOPLIST_FILE = "Config/InfiniteMeditationWatch-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Boundless Meditation";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Long meditation sessions run as a Mind & Body workout so your watch can keep tapping with your wrist down.";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Long meditation sessions run as a Mind & Body workout. A workout is only saved to Health if you turn on Save to Health.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Long sessions use a workout so your watch can keep tapping with your wrist down. Boundless Meditation does not read your Health records.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Saves completed meditations as Mindful Minutes. A long-session Mind and Body workout is saved only when Save workout to Health is on; otherwise that workout is discarded.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.AnomalousResearch.MeditationTimer;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -676,8 +676,8 @@
 				INFOPLIST_FILE = "Config/InfiniteMeditationWatch-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Boundless Meditation";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Long meditation sessions run as a Mind & Body workout so your watch can keep tapping with your wrist down.";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Long meditation sessions run as a Mind & Body workout. A workout is only saved to Health if you turn on Save to Health.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Long sessions use a workout so your watch can keep tapping with your wrist down. Boundless Meditation does not read your Health records.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Saves completed meditations as Mindful Minutes. A long-session Mind and Body workout is saved only when Save workout to Health is on; otherwise that workout is discarded.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.AnomalousResearch.MeditationTimer;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -707,6 +707,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_ENTITLEMENTS = Config/InfiniteMeditation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XPU32D9V4J;
@@ -715,6 +716,8 @@
 				INFOPLIST_FILE = "Config/InfiniteMeditation-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Boundless Meditation";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Boundless Meditation does not read your Health data. Access is requested only so completed meditations can be saved as Mindful Minutes.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Saves completed meditations as Mindful Minutes in the Health app.";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -747,6 +750,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_ENTITLEMENTS = Config/InfiniteMeditation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XPU32D9V4J;
@@ -755,6 +759,8 @@
 				INFOPLIST_FILE = "Config/InfiniteMeditation-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Boundless Meditation";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Boundless Meditation does not read your Health data. Access is requested only so completed meditations can be saved as Mindful Minutes.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Saves completed meditations as Mindful Minutes in the Health app.";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
