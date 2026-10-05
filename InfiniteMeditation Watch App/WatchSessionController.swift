@@ -235,6 +235,8 @@ extension WatchSessionController {
     /// Starts a session already `elapsed` seconds in. Screenshot staging only.
     /// Does not publish to the phone or write Health.
     func startForScreenshots(elapsed: TimeInterval) {
+        // Standard mode avoids the Health permission sheet covering the UI.
+        settings.values.watchMode = .standard
         let values = settings.values
         lastSessionSummary = nil
         let started = SessionEditor.start(
@@ -245,7 +247,7 @@ extension WatchSessionController {
         )
         snapshot = started
         timer.adopt(started)
-        runtime.begin(mode: values.watchMode, saveWorkout: false, paused: false)
+        runtime.begin(mode: .standard, saveWorkout: false, paused: false)
     }
 }
 #endif
