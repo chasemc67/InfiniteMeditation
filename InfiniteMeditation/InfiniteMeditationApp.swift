@@ -2,16 +2,20 @@
 //  InfiniteMeditationApp.swift
 //  InfiniteMeditation
 //
-//  Created by Chase McCarty on 11/21/25.
-//
 
 import SwiftUI
 
 @main
-struct HapticTimerApp: App {
+struct InfiniteMeditationApp: App {
+    @Environment(\.scenePhase) private var scenePhase
+    private let controller = PhoneSessionController.shared
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(controller: controller)
+        }
+        .onChange(of: scenePhase) { _, phase in
+            if phase == .active { controller.appBecameActive() }
         }
     }
 }
