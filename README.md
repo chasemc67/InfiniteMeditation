@@ -16,7 +16,7 @@ The previous watch app created a `WKExtendedRuntimeSession` but never declared a
 
 This version:
 
-1. **Declares the session types** in `Config/InfiniteMeditationWatch-Info.plist` (`WKBackgroundModes` = `mindfulness`, `workout-processing`, `audio`).
+1. **Declares the session types** in `Config/InfiniteMeditationWatch-Info.plist` (`WKBackgroundModes` = `mindfulness`, `workout-processing`; the Audio background mode is `UIBackgroundModes` = `audio`, since `audio` is not a valid `WKBackgroundModes` value).
 2. Offers **two background modes on the watch** (Settings › Background › Mode):
    - **Standard (default):** a `WKExtendedRuntimeSession` with the *mindfulness* type. No permissions needed and nothing is recorded. watchOS keeps the app frontmost with the screen off and lets it play haptics, **for up to 1 hour**. When time is nearly up the watch plays a double "retry" haptic; raising your wrist renews the session automatically.
    - **Long session:** an `HKWorkoutSession` (Mind & Body). Runs for as long as you meditate. Asks for Health permission once, shows the workout indicator, and only saves a workout if you turn on *Save to Health* (otherwise it is discarded).
