@@ -2,16 +2,15 @@
 //  InfiniteMeditation_Watch_AppTests.swift
 //  InfiniteMeditation Watch AppTests
 //
-//  Created by Chase McCarty on 11/21/25.
-//
 
 import Testing
-@testable import InfiniteMeditation_Watch_App
+@testable import HapticMeditation_Watch_App
 
-struct InfiniteMeditation_Watch_AppTests {
-
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+struct WatchMarkScheduleTests {
+    @Test func tenMinuteMarkIsMajorWithDefaults() {
+        let schedule = MeditationSettings().schedule
+        #expect(schedule.marksReached(atElapsed: 600) == 2)
+        #expect(schedule.isMajor(2))
+        #expect(!schedule.isMajor(1))
     }
-
 }
