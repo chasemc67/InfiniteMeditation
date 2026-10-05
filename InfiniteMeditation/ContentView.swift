@@ -81,6 +81,15 @@ struct ContentView: View {
         .sheet(isPresented: $showingSettings) {
             SettingsView(controller: controller)
         }
+        #if DEBUG
+        .onAppear {
+            switch ScreenshotSeed.state {
+            case "running": controller.startForScreenshots(elapsed: ScreenshotSeed.elapsed)
+            case "settings": showingSettings = true
+            default: break
+            }
+        }
+        #endif
     }
 
     @ViewBuilder

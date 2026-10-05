@@ -21,6 +21,7 @@ struct SettingsView: View {
     private var sessionActive: Bool { timer.phase != .idle }
 
     var body: some View {
+        ScrollViewReader { proxy in
         List {
             Section {
                 Picker("Interval", selection: $settings.values.intervalMinutes) {
@@ -54,6 +55,7 @@ struct SettingsView: View {
                 Picker("Mode", selection: $settings.values.watchMode) {
                     ForEach(WatchSessionMode.allCases) { Text($0.label).tag($0) }
                 }
+                .id("backgroundMode")
                 if settings.values.watchMode == .long {
                     Toggle("Save to Health", isOn: $settings.values.saveLongSessionsToHealth)
                 }
@@ -73,6 +75,14 @@ struct SettingsView: View {
             } footer: {
                 Text("Start, pause and end are mirrored while both apps are open.")
             }
+        }
+        #if DEBUG
+        .task {
+            guard ScreenshotSeed.state == "settingsLong" else { return }
+            try? await Task.sleep(for: .milliseconds(800))
+            proxy.scrollTo("backgroundMode", anchor: .top)
+        }
+        #endif
         }
         .navigationTitle("Settings")
     }

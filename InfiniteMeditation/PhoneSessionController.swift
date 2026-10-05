@@ -120,3 +120,13 @@ final class PhoneSessionController: ObservableObject {
         }
     }
 }
+
+#if DEBUG
+extension PhoneSessionController {
+    /// Starts a session already `elapsed` seconds in, without audio. Screenshot staging only.
+    func startForScreenshots(elapsed: TimeInterval) {
+        lastSessionSummary = nil
+        timer.start(schedule: settings.values.schedule, elapsed: elapsed)
+    }
+}
+#endif

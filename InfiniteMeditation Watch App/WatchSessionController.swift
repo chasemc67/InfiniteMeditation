@@ -110,3 +110,15 @@ final class WatchSessionController: ObservableObject {
         }
     }
 }
+
+#if DEBUG
+extension WatchSessionController {
+    /// Starts a session already `elapsed` seconds in. Screenshot staging only.
+    func startForScreenshots(elapsed: TimeInterval) {
+        let values = settings.values
+        lastSessionSummary = nil
+        runtime.begin(mode: values.watchMode, saveWorkout: values.saveLongSessionsToHealth)
+        timer.start(schedule: values.schedule, elapsed: elapsed)
+    }
+}
+#endif
