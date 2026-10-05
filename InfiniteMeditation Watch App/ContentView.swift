@@ -2,116 +2,146 @@
 //  ContentView.swift
 //  InfiniteMeditation Watch App
 //
-//  Created by Chase McCarty on 11/21/25.
-//
 
 import SwiftUI
-import WatchKit
 
 struct ContentView: View {
-    @StateObject private var viewModel = TimerViewModel()
-    @ObservedObject var connectivity = ConnectivityManager.shared
-    @Environment(\.scenePhase) private var scenePhase
-    @State private var isScreenActive = true
-    
+    @ObservedObject var controller: WatchSessionController
+    @ObservedObject var timer: MeditationTimer
+    @ObservedObject var runtime: BackgroundRuntime
+    @ObservedObject var settings: SettingsStore
+
+    @Environment(\.isLuminanceReduced) private var isLuminanceReduced
+
+    init(controller: WatchSessionController = .shared) {
+        self.controller = controller
+        timer = controller.timer
+        runtime = controller.runtime
+        settings = controller.settings
+    }
+
     var body: some View {
-        GeometryReader { geometry in
-            VStack(spacing: 0) {
-                // Time display at top
-                Spacer()
-                    .frame(height: 20)
-                
-                Text(timeString(from: viewModel.elapsedTime, showCentiseconds: isScreenActive))
-                    .font(.system(size: 48, weight: .light, design: .monospaced))
-                    .minimumScaleFactor(0.5)
+        NavigationStack {
+            VStack(spacing: 6) {
+                ElapsedTimeText(timer: timer)
+                    .font(.system(size: 44, weight: .thin, design: .rounded))
+                    .monospacedDigit()
+                    .minimumScaleFactor(0.6)
                     .lineLimit(1)
-                
-                Spacer()
-                
-                // Bottom buttons
-                HStack(spacing: 0) {
-                    // Left button - Reset
-                    Button(action: {
-                        viewModel.reset()
-                    }) {
-                        Circle()
-                            .fill(Color.gray.opacity(0.3))
-                            .frame(width: 60, height: 60)
-                            .overlay(
-                                Text("Reset")
-                                    .font(.system(size: 12, weight: .medium))
-                                    .foregroundColor(.white)
-                            )
+                    .foregroundStyle(isLuminanceReduced ? Color.secondary : Color.primary)
+
+                NextMarkText(timer: timer)
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+
+                StatusLine(timer: timer, runtime: runtime, settings: settings.values, summary: controller.lastSessionSummary)
+                    .font(.caption2)
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity)
+
+                Spacer(minLength: 4)
+
+                controls
+                    .opacity(isLuminanceReduced ? 0.4 : 1)
+            }
+            .padding(.horizontal, 4)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink {
+                        SettingsView(controller: controller)
+                    } label: {
+                        Image(systemName: "gearshape")
                     }
-                    .buttonStyle(.plain)
-                    .disabled(viewModel.elapsedTime == 0)
-                    .opacity(viewModel.elapsedTime == 0 ? 0.5 : 1)
-                    
-                    Spacer()
-                    
-                    // Right button - Start/Stop
-                    Button(action: {
-                        if viewModel.isRunning {
-                            viewModel.stop()
-                        } else {
-                            viewModel.start()
-                        }
-                    }) {
-                        Circle()
-                            .fill(viewModel.isRunning ? Color.red.opacity(0.3) : Color.green.opacity(0.3))
-                            .frame(width: 60, height: 60)
-                            .overlay(
-                                Text(viewModel.isRunning ? "Stop" : "Start")
-                                    .font(.system(size: 12, weight: .medium))
-                                    .foregroundColor(viewModel.isRunning ? .red : .green)
-                            )
-                    }
-                    .buttonStyle(.plain)
+                    .accessibilityLabel("Settings")
                 }
-                .padding(.horizontal, 20)
-                .padding(.bottom, 16)
-            }
-        }
-        .onAppear {
-            setupHapticFeedback()
-        }
-        .onChange(of: scenePhase) { _, newPhase in
-            isScreenActive = (newPhase == .active)
-        }
-    }
-    
-    private func setupHapticFeedback() {
-        viewModel.onHapticInterval = { count in
-            playHapticSequence(count: count)
-        }
-    }
-    
-    private func playHapticSequence(count: Int) {
-        for i in 0..<count {
-            DispatchQueue.main.asyncAfter(deadline: .now() + Double(i) * 0.5) {
-                WKInterfaceDevice.current().play(.start)
             }
         }
     }
-    
-    private func timeString(from interval: TimeInterval, showCentiseconds: Bool) -> String {
-        let totalSeconds = Int(interval)
-        let hours = totalSeconds / 3600
-        let minutes = (totalSeconds % 3600) / 60
-        let seconds = totalSeconds % 60
-        let centiseconds = Int((interval.truncatingRemainder(dividingBy: 1)) * 100)
-        
-        // Show hours only if >= 60 minutes (3600 seconds)
-        if totalSeconds >= 3600 {
-            // Never show centiseconds for 60+ min sessions
-            return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
-        } else {
-            if showCentiseconds {
-                return String(format: "%02d:%02d.%02d", minutes, seconds, centiseconds)
+
+    @ViewBuilder
+    private var controls: some View {
+        switch timer.phase {
+        case .idle:
+            Button {
+                controller.start()
+            } label: {
+                Label("Begin", systemImage: "play.fill")
+                    .frame(maxWidth: .infinity)
+            }
+            .tint(.teal)
+        case .running, .paused:
+            HStack(spacing: 8) {
+                Button {
+                    controller.end()
+                } label: {
+                    Image(systemName: "stop.fill")
+                        .frame(maxWidth: .infinity)
+                }
+                .tint(.gray)
+                .accessibilityLabel("End session")
+
+                Button {
+                    if timer.phase == .running { controller.pause() } else { controller.resume() }
+                } label: {
+                    Image(systemName: timer.phase == .running ? "pause.fill" : "play.fill")
+                        .frame(maxWidth: .infinity)
+                }
+                .tint(.teal)
+                .accessibilityLabel(timer.phase == .running ? "Pause" : "Resume")
+            }
+        }
+    }
+}
+
+/// Always tells the user whether wrist-down taps will actually happen.
+private struct StatusLine: View {
+    @ObservedObject var timer: MeditationTimer
+    @ObservedObject var runtime: BackgroundRuntime
+    let settings: MeditationSettings
+    let summary: String?
+
+    var body: some View {
+        VStack(spacing: 2) {
+            primary
+            if let notice = runtime.notice, timer.phase != .idle {
+                Text(notice).foregroundStyle(.yellow)
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var primary: some View {
+        if timer.phase == .idle {
+            if let summary {
+                Text("Last: \(summary)").foregroundStyle(.secondary)
             } else {
-                return String(format: "%02d:%02d", minutes, seconds)
+                Text(scheduleDescription).foregroundStyle(.secondary)
+            }
+        } else {
+            switch runtime.status {
+            case .off, .starting:
+                Text("Starting background session…").foregroundStyle(.secondary)
+            case .running(.standard, let until):
+                if let until {
+                    Text("Wrist-down taps on until \(TimeFormat.time(until))").foregroundStyle(.green)
+                } else {
+                    Text("Wrist-down taps on").foregroundStyle(.green)
+                }
+            case .running(.long, _):
+                Text("Long session · wrist-down taps on").foregroundStyle(.green)
+            case .expiringSoon:
+                Text("Background time ending. Raise wrist to renew.").foregroundStyle(.orange)
+            case .stopped(let message), .failed(let message):
+                Text(message).foregroundStyle(.red)
             }
         }
+    }
+
+    private var scheduleDescription: String {
+        let major = settings.majorEvery > 0 ? " · major every \(settings.majorEvery * settings.intervalMinutes) min" : ""
+        return "Tap every \(settings.intervalMinutes) min\(major)"
     }
 }
 

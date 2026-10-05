@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AB9357322ED12F19005BC0C3 /* HapticMeditation Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AB9357312ED12F19005BC0C3 /* HapticMeditation Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		AB9357A22ED13017005BC0C3 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9357A12ED13017005BC0C3 /* WatchConnectivity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +69,6 @@
 		AB9357312ED12F19005BC0C3 /* HapticMeditation Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HapticMeditation Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9357402ED12F1A005BC0C3 /* HapticMeditation Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HapticMeditation Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB93574A2ED12F1A005BC0C3 /* HapticMeditation Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HapticMeditation Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB9357A12ED13017005BC0C3 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -104,6 +102,16 @@
 			path = "InfiniteMeditation Watch AppUITests";
 			sourceTree = "<group>";
 		};
+		AB9357B02ED2A000005BC0C3 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AB9357B12ED2A000005BC0C3 /* Config */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Config;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +119,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB9357A22ED13017005BC0C3 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,13 +163,14 @@
 		AB9357052ED12F17005BC0C3 = {
 			isa = PBXGroup;
 			children = (
+				AB9357B02ED2A000005BC0C3 /* Shared */,
+				AB9357B12ED2A000005BC0C3 /* Config */,
 				AB9357102ED12F18005BC0C3 /* InfiniteMeditation */,
 				AB93571E2ED12F19005BC0C3 /* InfiniteMeditationTests */,
 				AB9357282ED12F19005BC0C3 /* InfiniteMeditationUITests */,
 				AB9357352ED12F19005BC0C3 /* InfiniteMeditation Watch App */,
 				AB9357432ED12F1A005BC0C3 /* InfiniteMeditation Watch AppTests */,
 				AB93574D2ED12F1A005BC0C3 /* InfiniteMeditation Watch AppUITests */,
-				AB9357A02ED13017005BC0C3 /* Frameworks */,
 				AB93570F2ED12F18005BC0C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -178,14 +186,6 @@
 				AB93574A2ED12F1A005BC0C3 /* HapticMeditation Watch AppUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		AB9357A02ED13017005BC0C3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AB9357A12ED13017005BC0C3 /* WatchConnectivity.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +207,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				AB9357102ED12F18005BC0C3 /* InfiniteMeditation */,
+				AB9357B02ED2A000005BC0C3 /* Shared */,
 			);
 			name = HapticMeditation;
 			packageProductDependencies = (
@@ -275,6 +276,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				AB9357352ED12F19005BC0C3 /* InfiniteMeditation Watch App */,
+				AB9357B02ED2A000005BC0C3 /* Shared */,
 			);
 			name = "HapticMeditation Watch App";
 			packageProductDependencies = (
@@ -627,19 +629,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/InfiniteMeditationWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5QLYWR2R9M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = InfiniteMeditation;
+				INFOPLIST_FILE = "Config/InfiniteMeditationWatch-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Infinite Meditation";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Long meditation sessions run as a Mind & Body workout so your watch can keep tapping with your wrist down.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Long meditation sessions run as a Mind & Body workout. A workout is only saved to Health if you turn on Save to Health.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.AnomalousResearch.HapticMeditation;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.HapticMeditation.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -660,19 +667,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/InfiniteMeditationWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5QLYWR2R9M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = InfiniteMeditation;
+				INFOPLIST_FILE = "Config/InfiniteMeditationWatch-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Infinite Meditation";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Long meditation sessions run as a Mind & Body workout so your watch can keep tapping with your wrist down.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Long meditation sessions run as a Mind & Body workout. A workout is only saved to Health if you turn on Save to Health.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.AnomalousResearch.HapticMeditation;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AnomalousResearch.HapticMeditation.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -700,13 +712,15 @@
 				DEVELOPMENT_TEAM = 5QLYWR2R9M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = InfiniteMeditation;
+				INFOPLIST_FILE = "Config/InfiniteMeditation-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Infinite Meditation";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -738,13 +752,15 @@
 				DEVELOPMENT_TEAM = 5QLYWR2R9M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = InfiniteMeditation;
+				INFOPLIST_FILE = "Config/InfiniteMeditation-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Infinite Meditation";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -831,7 +847,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = InfiniteMeditation;
+				TEST_TARGET_NAME = HapticMeditation;
 			};
 			name = Debug;
 		};
@@ -853,7 +869,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = InfiniteMeditation;
+				TEST_TARGET_NAME = HapticMeditation;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -922,7 +938,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "InfiniteMeditation Watch App";
+				TEST_TARGET_NAME = "HapticMeditation Watch App";
 				WATCHOS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Debug;
@@ -944,7 +960,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "InfiniteMeditation Watch App";
+				TEST_TARGET_NAME = "HapticMeditation Watch App";
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 26.0;
 			};
