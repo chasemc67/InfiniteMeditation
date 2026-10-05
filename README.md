@@ -22,7 +22,7 @@ This version:
 2. Offers **two background modes on the watch** (Settings › Background › Mode):
    - **Standard (default):** a `WKExtendedRuntimeSession` with the *mindfulness* type. No permissions needed and nothing is recorded. watchOS keeps the app frontmost with the screen off and lets it play haptics, **for up to 1 hour**. When time is nearly up the watch plays a double "retry" haptic; raising your wrist renews the session automatically.
    - **Long session:** an `HKWorkoutSession` (Mind & Body). Runs for as long as you meditate. Asks for Health permission once, shows the workout indicator, and only saves a workout if you turn on *Save workout to Health* (otherwise it is discarded). That workout is separate from Mindful Minutes: a Mind & Body workout is not a Mindful Minutes entry, and Mindful Minutes are still saved when the workout is discarded.
-3. **Shows the background status on screen**: "Wrist-down taps on until 10:42", "Background time ending", or the exact reason watchOS stopped the session (expired, you left the app, Low Power Mode, start error…). If Long mode can't get Health permission it falls back to Standard and says so.
+3. **Stays quiet when everything works, and speaks up when it doesn't**: during a session the watch shows no status text while taps are active, and a short line only for real problems ("Taps ending soon", or why watchOS stopped the session: 1-hour limit, you left the app, Low Power Mode, start error…). If Long mode can't get Health permission it falls back to Standard and says so.
 4. **Schedules marks robustly**: elapsed time comes from wall-clock anchors, and the scheduler sleeps once until the next mark instead of polling. It never drifts, never double-fires, and skips (rather than plays late) a mark discovered long after it was due. The clock itself is drawn by `Text(timerInterval:)`, so nothing ticks at 100 Hz.
 5. **iPhone:** holds a background audio session (`UIBackgroundModes` = `audio`, category `.playback` + `.mixWithOthers`) with an `AVAudioEngine` running for the whole session, so the app keeps running locked and plays the chime at each mark. It recovers from interruptions (calls, Siri, alarms), route changes and media-server resets.
 
@@ -148,29 +148,29 @@ Before testing, on the watch: Settings › Sounds & Haptics › **Haptic Alerts*
 
 **Watch, Standard mode (the original bug)**
 1. On the watch, open Settings (gear) › Interval **1 min**, Major mark **Every 2 marks**. Tap *Try regular* and *Try major* and confirm they feel different.
-2. Back on the main screen, tap **Begin**. Within a second or two the status line should turn green: "Wrist-down taps on until hh:mm" (about one hour from now). If it shows red text instead, note the message; that's the failure reason.
+2. Back on the main screen, tap **Begin**. No status text should appear under the timer (that means taps are active). If red text appears instead, note the message; that's the failure reason.
 3. Lower your wrist and let the screen turn off. Don't touch the watch.
 4. Confirm a single tap at 1:00, a double tap at 2:00, single at 3:00, double at 4:00.
-5. Raise your wrist: the clock shows the correct elapsed time and the status is still green.
+5. Raise your wrist: the clock shows the correct elapsed time and there is still no red status text.
 6. Repeat with the defaults (**5 min / every 2 marks**): wrist down for at least 11 minutes, and confirm a single tap at 5:00 and a double tap at 10:00.
 7. Pause, wait past a mark, and confirm no tap; Resume and confirm the next mark lands on schedule (e.g. paused at 3:30 for 2 min with 1-min marks → next tap at clock 4:00).
-8. Press the Digital Crown to leave the app mid-session, then reopen it. The status should explain that the session stopped, then turn green again (it renews automatically).
-9. Optional, for the 1-hour cap: run a Standard session past 60 min with the wrist down. Expect the double "retry" haptic shortly before the hour, then no taps until you raise your wrist; raising it renews the session (status goes green with a new end time).
+8. Press the Digital Crown to leave the app mid-session, then reopen it. A short red line should explain that the session stopped, then disappear again (it renews automatically).
+9. Optional, for the 1-hour cap: run a Standard session past 60 min with the wrist down. Expect the double "retry" haptic shortly before the hour, then no taps until you raise your wrist; raising it renews the session (the warning disappears).
 
 **Watch, Long session mode**
 1. Settings › Background › Mode **Long session (workout)**. Leave *Save workout to Health* off.
-2. Begin. Allow the Health prompt (workouts). The status shows "Long session · wrist-down taps on" and the workout indicator appears.
+2. Begin. Allow the Health prompt (workouts). No status text appears under the timer, and the workout indicator appears.
 3. Wrist down for over 60 minutes (or at least 15 to sanity-check it); taps continue at every mark.
 4. End. With *Save workout to Health* off, no workout appears in the Fitness app. Turn it on, run a short session, end, and confirm a Mind & Body workout appears. Mindful Minutes are a separate entry (see below) and still appear when the workout was discarded.
 5. Deny workout permission (Settings › Health › Data Access on the watch, or reinstall) and Begin. Expect a yellow note that it fell back to Standard mode, with taps still working.
 
 **Pause on the iPhone with the wrist down**
-1. Open both apps. On the watch, tap **Begin** and confirm the status turns green. On the iPhone, confirm the timer is running too.
+1. Open both apps. On the watch, tap **Begin** and confirm no red status text appears. On the iPhone, confirm the timer is running too.
 2. Lower your wrist and leave it down so the watch screen turns off. Wait until a haptic would still be able to fire (the watch app is backgrounded, not force-quit).
 3. On the iPhone, tap **Pause**.
 4. Raise your wrist. The watch timer must be paused, not still counting, and it must not tap at the next mark.
 5. Tap **Resume** on the iPhone with the wrist down again, then raise the wrist: the watch is running and the elapsed time matches the phone within a second or two.
-6. End on the iPhone with the wrist down, then raise the wrist: the watch session is over (no green "taps on" status, haptics stopped).
+6. End on the iPhone with the wrist down, then raise the wrist: the watch session is over (timer back to idle, haptics stopped).
 
 **Mindful Minutes**
 1. On the iPhone, Settings › Health › *Mindful Minutes* is on. Begin, sit for at least a few seconds, optionally Pause for a bit, Resume, then End. Allow the Health prompt the first time (mindful sessions).
@@ -199,7 +199,7 @@ Before testing, on the watch: Settings › Sounds & Haptics › **Haptic Alerts*
 1. On an iPhone with no paired watch (or with the watch app deleted), all controls work and Settings shows no Apple Watch section.
 
 **Mirroring**
-1. Open both apps. Begin on the phone: the watch starts too (green status). Pause, Resume and End on either device and the other follows while both are open.
+1. Open both apps. Begin on the phone: the watch starts too (no red status text). Pause, Resume and End on either device and the other follows while both are open.
 2. Change the interval on the phone; the watch's Settings shows the new value (it syncs even if the watch app is closed).
 3. The wrist-down pause case above is the one that used to leave the watch running.
 
@@ -214,7 +214,7 @@ Before testing, on the watch: Settings › Sounds & Haptics › **Haptic Alerts*
 
 - `MeditationTimer` (Shared) is the count-up clock and mark scheduler. It stores `accumulated` time plus a `runningSince` date. A single `Task.sleep(..., clock: .continuous)` waits until the next mark, and `handleDueMarks()` decides what fired from wall-clock elapsed time, so late or duplicate wake-ups are harmless. `adopt` snaps that clock to a mirrored snapshot and cancels the scheduler when the snapshot is paused or ended.
 - `SessionSnapshot` / `SessionReconciler` (Shared) are the authoritative session. Last writer wins by `updatedAt` (revision, then a more terminal phase, breaks ties). Pausing closes a mindful segment; resuming opens another. Mindful Minutes are one Health sample per uninterrupted segment, so a pause is not counted. Samples carry `HKMetadataKeySyncIdentifier` and `HKMetadataKeySyncVersion`, so if both devices do try to save the same segment, HealthKit keeps one.
-- `BackgroundRuntime` (watch) owns the extended runtime or workout session and publishes a `status` the UI always shows. A meditation pause pauses the workout session when one is running. The extended runtime session stays up (watchOS cannot pause it) so a later resume or end can still arrive with the wrist down; the haptic scheduler is what stops the taps. The workout is discarded on end unless *Save workout to Health* is on. Mindful Minutes are written separately and do not depend on that switch.
+- `BackgroundRuntime` (watch) owns the extended runtime or workout session and publishes a `status`; the UI shows it only when something is wrong. A meditation pause pauses the workout session when one is running. The extended runtime session stays up (watchOS cannot pause it) so a later resume or end can still arrive with the wrist down; the haptic scheduler is what stops the taps. The workout is discarded on end unless *Save workout to Health* is on. Mindful Minutes are written separately and do not depend on that switch.
 - `ChimePlayer` (iPhone) owns the audio session and engine.
 - `SessionHistoryLog` (Shared) turns an ended snapshot into a row (start time and meditation duration) and merges two logs by session id. A delete stores a tombstone so the other device's copy cannot bring the row back. It does not touch HealthKit.
 - `ConnectivityService` (Shared) puts settings, the latest session snapshot, and the history log in the application context, so a later settings push cannot wipe them. It also `sendMessage`s when the other app is reachable and `transferUserInfo`s so a backgrounded watch or phone still receives the pause, end, or history row. Each side reads that context on activation, on reachability changes, and when the scene becomes active.

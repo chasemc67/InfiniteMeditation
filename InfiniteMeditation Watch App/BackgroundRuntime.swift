@@ -170,19 +170,19 @@ final class BackgroundRuntime: NSObject, ObservableObject {
 
     private func startWorkoutSession() async {
         guard HKHealthStore.isHealthDataAvailable() else {
-            fallBackToStandard("Health isn't available on this watch.")
+            fallBackToStandard("Health isn't available.")
             return
         }
         let workoutType = HKObjectType.workoutType()
         do {
             try await healthStore.requestAuthorization(toShare: [workoutType], read: [])
         } catch {
-            fallBackToStandard("Health permission request failed: \(error.localizedDescription)")
+            fallBackToStandard("Health permission failed.")
             return
         }
         guard activeMode == .long else { return }
         guard healthStore.authorizationStatus(for: workoutType) == .sharingAuthorized else {
-            fallBackToStandard("Long sessions need permission to save workouts. Allow it in Settings › Health › Data Access.")
+            fallBackToStandard("Workout permission needed.")
             return
         }
 
@@ -200,7 +200,7 @@ final class BackgroundRuntime: NSObject, ObservableObject {
             try await builder.beginCollection(at: start)
         } catch {
             workoutSession?.end()
-            fallBackToStandard("Couldn't start workout session: \(error.localizedDescription)")
+            fallBackToStandard("Couldn't start workout.")
         }
     }
 
@@ -209,7 +209,7 @@ final class BackgroundRuntime: NSObject, ObservableObject {
         workoutSession = nil
         workoutBuilder = nil
         activeMode = .standard
-        notice = "\(reason) Using Standard mode (1 hr limit)."
+        notice = "\(reason) Using Standard (1 hr)."
         startExtendedSession()
     }
 
@@ -234,7 +234,7 @@ final class BackgroundRuntime: NSObject, ObservableObject {
             workoutSession = nil
             workoutBuilder = nil
             if activeMode == .long {
-                status = .stopped("The workout session ended unexpectedly. Raise your wrist to restart it.")
+                status = .stopped("Workout ended. Raise wrist to restart.")
             }
             finish(builder, save: saveWorkout, at: date)
         default:
@@ -245,7 +245,7 @@ final class BackgroundRuntime: NSObject, ObservableObject {
     private func workoutFailed(_ id: ObjectIdentifier, message: String) {
         guard let session = workoutSession, ObjectIdentifier(session) == id else { return }
         guard activeMode != nil else { return }
-        status = .failed("Workout session error: \(message)")
+        status = .failed("Workout error: \(message)")
     }
 }
 
@@ -269,19 +269,19 @@ extension BackgroundRuntime: WKExtendedRuntimeSessionDelegate {
         let message: String
         switch reason {
         case .none:
-            message = "Background session ended."
+            message = "Taps stopped."
         case .expired:
-            message = "Reached watchOS's 1-hour limit. Raise your wrist to renew, or use Long session mode."
+            message = "1-hour limit reached. Raise wrist to renew."
         case .resignedFrontmost:
-            message = "You left the app, so watchOS stopped the session. Reopen it to resume taps."
+            message = "Taps stopped: you left the app."
         case .sessionInProgress:
-            message = "Another background session is already running."
+            message = "Another session is running."
         case .suppressedBySystem:
-            message = "watchOS suppressed the session (Low Power Mode or system load)."
+            message = "Taps stopped: Low Power Mode?"
         case .error:
-            message = "Couldn't start: \(error?.localizedDescription ?? "unknown error"). Check that WKBackgroundModes includes mindfulness."
+            message = "Couldn't start taps: \(error?.localizedDescription ?? "unknown error")"
         @unknown default:
-            message = "Background session stopped (\(reason.rawValue))."
+            message = "Taps stopped (\(reason.rawValue))."
         }
         Task { @MainActor in self.extendedSessionInvalidated(id, reason: message) }
     }

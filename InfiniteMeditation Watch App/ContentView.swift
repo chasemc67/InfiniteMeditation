@@ -105,7 +105,8 @@ struct ContentView: View {
     }
 }
 
-/// Always tells the user whether wrist-down taps will actually happen.
+/// Shows the schedule (or last session) when idle. During a session it stays empty unless
+/// something is wrong: the background session stopped or failed, or is about to expire.
 private struct StatusLine: View {
     @ObservedObject var timer: MeditationTimer
     @ObservedObject var runtime: BackgroundRuntime
@@ -119,6 +120,7 @@ private struct StatusLine: View {
                 Text(notice).foregroundStyle(.yellow)
             }
         }
+        .lineLimit(2)
     }
 
     @ViewBuilder
@@ -129,22 +131,12 @@ private struct StatusLine: View {
             } else {
                 Text(scheduleDescription).foregroundStyle(.secondary)
             }
-        } else if timer.phase == .paused {
-            Text("Paused").foregroundStyle(.secondary)
-        } else {
+        } else if timer.phase == .running {
             switch runtime.status {
-            case .off, .starting:
-                Text("Starting background session…").foregroundStyle(.secondary)
-            case .running(.standard, let until):
-                if let until {
-                    Text("Wrist-down taps on until \(TimeFormat.time(until))").foregroundStyle(.green)
-                } else {
-                    Text("Wrist-down taps on").foregroundStyle(.green)
-                }
-            case .running(.long, _):
-                Text("Long session · wrist-down taps on").foregroundStyle(.green)
+            case .off, .starting, .running:
+                EmptyView()
             case .expiringSoon:
-                Text("Background time ending. Raise wrist to renew.").foregroundStyle(.orange)
+                Text("Taps ending soon. Raise wrist.").foregroundStyle(.orange)
             case .stopped(let message), .failed(let message):
                 Text(message).foregroundStyle(.red)
             }
