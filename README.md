@@ -59,7 +59,7 @@ The iPhone never "pushes" taps to the watch. Each device runs its own timer and 
 | Display name | Infinite Meditation | Infinite Meditation |
 | Version / build | 2.0 / `CURRENT_PROJECT_VERSION` | 2.0 / same (must match the iOS app) |
 | Deployment target | iOS 26.0 | watchOS 26.0 |
-| Team | Anomalous Research LLC (`5QLYWR2R9M`), automatic signing | same |
+| Team | Anomalous Research LLC (`XPU32D9V4J`), automatic signing | same |
 | Capabilities | Background Modes: Audio | Background Modes: Mindfulness session, Workout processing, Audio; HealthKit |
 
 The existing bundle IDs were kept so any App IDs you already registered still apply.
